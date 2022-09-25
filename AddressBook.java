@@ -1,5 +1,7 @@
 package addressbook;
 
+import java.util.Scanner;
+
 class PersonDetails {
 	String firstName, lastName, city, state, email;
 	int dateOfBirth, phnNumber, zip;
@@ -21,6 +23,26 @@ class PersonDetails {
 	public PersonDetails() {
 	}
 
+	void askDetails() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter First Name ");
+		this.firstName = sc.next();
+		System.out.println("Enter Last Name ");
+		this.lastName = sc.next();
+		System.out.println("Entre Date of Birth");
+		this.dateOfBirth = sc.nextInt();
+		System.out.println("Enter Phone Number ");
+		this.phnNumber = sc.nextInt();
+		System.out.println("Enter City Name");
+		this.city = sc.next();
+		System.out.println("Enter State Name ");
+		this.state=sc.next();
+		System.out.println("Enter Zip");
+		this.zip= sc.nextInt();
+		System.out.println("Enter email ");
+		this.email=sc.next();
+	}
+
 	void PrintDetails() {
 		System.out.println("Printing Details:");
 		System.out.println("First Name is: " + this.firstName);
@@ -38,8 +60,13 @@ class PersonDetails {
 public class AddressBook {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book Program");
-		PersonDetails P = new PersonDetails();
-		P.PrintDetails();
+		PersonDetails P1 = new PersonDetails();
+		PersonDetails P2 = new PersonDetails();
+		P1.askDetails();
+		P1.PrintDetails();
+		P2.askDetails();
+		P2.PrintDetails();
+		
 
 	}
 }
