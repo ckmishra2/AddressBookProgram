@@ -138,7 +138,7 @@ public class AddressBook {
 
 		boolean bFound = false;
 		while (!bFound) {
-			System.out.println("Enter the name of Address book to be modified");
+			System.out.println("Enter the name of Address book to be modified ");
 			String AddBookToBeMod = sc.next();
 			for (int k = 0; k < LLAB.size(); k++) {
 				if (LLAB.get(k).name.equals(AddBookToBeMod)) {
