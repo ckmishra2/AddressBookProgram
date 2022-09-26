@@ -95,7 +95,7 @@ public class AddressBook {
 			}
 		}
 	}
-
+//for print details
 	void printDetails() {
 		System.out.println(this.name + " address book has " + this.LLPA.size() + " addresses");
 		for (int i = 0; i < this.LLPA.size(); i++) {
